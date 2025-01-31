@@ -16,5 +16,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "XeniacDatePicker"
+rootProject.name = "JalaliDatePicker"
 include(":app")
