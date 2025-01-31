@@ -28,10 +28,6 @@ android {
         }
     }
 
-    androidResources {
-        generateLocaleConfig = true
-    }
-
     buildTypes {
         debug {
             versionNameSuffix = " - Debug"
