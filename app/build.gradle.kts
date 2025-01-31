@@ -91,7 +91,9 @@ dependencies {
     implementation(libs.bundles.coroutines)
 
     // Timber Library
-    implementation(libs.timber)  // Local Unit Test Libraries
+    implementation(libs.timber)
+
+    // Local Unit Test Libraries
     testImplementation(libs.bundles.local.unit.tests)
 
     // Instrumentation Test Libraries
