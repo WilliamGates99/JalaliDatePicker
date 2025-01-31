@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -17,9 +20,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
-            isShrinkResources = true
-
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -48,9 +49,9 @@ dependencies {
     // Java 8+ API Desugaring Support
     coreLibraryDesugaring(libs.desugar.jdk.libs)
 
-    implementation(libs.bundles.essentials)
+    implementation(libs.bundles.library.essentials)
 
     // Jetpack Compose
     implementation(platform(libs.compose.bom))
-    implementation(libs.bundles.compose)
+    implementation(libs.bundles.library.compose)
 }
