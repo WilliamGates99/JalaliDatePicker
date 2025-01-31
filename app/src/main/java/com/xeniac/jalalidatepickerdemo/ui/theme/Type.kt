@@ -1,4 +1,4 @@
-package com.xeniac.datepickerdemo.ui.theme
+package com.xeniac.jalalidatepickerdemo.ui.theme
 
 import androidx.compose.material3.Typography
 

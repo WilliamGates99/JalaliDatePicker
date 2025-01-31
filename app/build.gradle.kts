@@ -10,12 +10,12 @@ plugins {
 }
 
 android {
-    namespace = "com.xeniac.datepickerdemo"
+    namespace = "com.xeniac.jalalidatepickerdemo"
     compileSdk = 35
     buildToolsVersion = "35.0.0"
 
     defaultConfig {
-        applicationId = "com.xeniac.datepickerdemo"
+        applicationId = "com.xeniac.jalalidatepickerdemo"
         minSdk = 21
         targetSdk = 35
         versionCode = 1

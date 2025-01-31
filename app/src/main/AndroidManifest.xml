@@ -14,7 +14,7 @@
         android:theme="@style/Theme.XeniacDatePicker"
         tools:targetApi="tiramisu">
         <activity
-            android:name=".MainActivity"
+            android:name="com.xeniac.jalalidatepickerdemo.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.XeniacDatePicker"
             android:windowSoftInputMode="adjustResize">

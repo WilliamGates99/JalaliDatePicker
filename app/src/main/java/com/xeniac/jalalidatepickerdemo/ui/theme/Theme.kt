@@ -1,4 +1,4 @@
-package com.xeniac.datepickerdemo.ui.theme
+package com.xeniac.jalalidatepickerdemo.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
