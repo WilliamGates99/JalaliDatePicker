@@ -6,7 +6,6 @@ kotlinxSerializationJson = "1.8.0"
 kotlinxDatetime = "0.6.1"
 compose-bom = "2025.01.01"
 activityCompose = "1.10.0"
-constraintlayoutCompose = "1.1.0"
 navigationCompose = "2.8.6"
 androidLifecycle = "2.8.7"
 coroutines = "1.10.1"
@@ -23,7 +22,6 @@ espresso = "3.6.1"
 # Plugins
 agp = "8.8.0"
 kotlin = "2.1.10"
-ksp = "2.1.10-1.0.29"
 
 [libraries]
 # Java 8+ API Desugaring Support
@@ -38,11 +36,9 @@ kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.
 compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom" }
 compose-ui = { group = "androidx.compose.ui", name = "ui" }
 compose-material3 = { group = "androidx.compose.material3", name = "material3" }
-compose-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata" }
 compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
 navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 
 # Architectural Components
@@ -75,9 +71,11 @@ compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-mani
 
 [bundles]
 essentials = ["core-ktx", "appcompat", "kotlinx-serialization-json", "kotlinx-datetime"]
-compose = ["compose-ui", "compose-material3", "compose-runtime-livedata", "compose-ui-tooling-preview", "compose-ui-tooling", "activity-compose", "constraintlayout-compose", "navigation-compose"]
+compose = ["compose-ui", "compose-material3", "compose-ui-tooling-preview", "compose-ui-tooling", "activity-compose", "navigation-compose"]
 architectural-components = ["lifecycle-viewmodel-ktx", "lifecycle-viewmodel-compose", "lifecycle-runtime-ktx", "lifecycle-runtime-compose"]
 coroutines = ["kotlinx-coroutines-android"]
+library-essentials = ["kotlinx-serialization-json", "kotlinx-datetime"]
+library-compose = ["compose-ui", "compose-material3"]
 
 local-unit-tests = ["truth", "junit", "arch-core-testing", "kotlinx-coroutines-test"]
 instrumentation-tests = ["truth", "junit", "test-ext-junit", "arch-core-testing", "kotlinx-coroutines-test", "test-core", "test-runner", "test-rules"]
@@ -90,4 +88,3 @@ kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
