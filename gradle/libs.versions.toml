@@ -1,0 +1,95 @@
+[versions]
+desugar_jdk_libs = "2.1.4"
+coreKtx = "1.15.0"
+appcompat = "1.7.0"
+coreSplashscreen = "1.0.1"
+kotlinxSerializationJson = "1.8.0"
+kotlinxDatetime = "0.6.1"
+compose-bom = "2025.01.01"
+activityCompose = "1.10.0"
+constraintlayoutCompose = "1.1.0"
+navigationCompose = "2.8.6"
+androidLifecycle = "2.8.7"
+coroutines = "1.10.1"
+timber = "5.0.1"
+truth = "1.4.4"
+junit = "4.13.2"
+archCoreTesting = "2.2.0"
+testCore = "1.6.1"
+testExtJunit = "1.2.1"
+testRunner = "1.6.2"
+testRules = "1.6.1"
+espresso = "3.6.1"
+
+# Plugins
+agp = "8.8.0"
+kotlin = "2.1.10"
+ksp = "2.1.10-1.0.29"
+
+[libraries]
+# Java 8+ API Desugaring Support
+desugar_jdk_libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
+
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
+
+# Jetpack Compose
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom" }
+compose-ui = { group = "androidx.compose.ui", name = "ui" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+compose-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata" }
+compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+
+# Architectural Components
+lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidLifecycle" }
+lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidLifecycle" }
+lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidLifecycle" }
+lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidLifecycle" }
+
+# Coroutines
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+
+# Timber Library
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+
+# Test Libraries
+truth = { module = "com.google.truth:truth", version.ref = "truth" }
+junit = { module = "junit:junit", version.ref = "junit" }
+test-ext-junit = { module = "androidx.test.ext:junit", version.ref = "testExtJunit" }
+arch-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "archCoreTesting" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+test-core = { module = "androidx.test:core", version.ref = "testCore" }
+test-runner = { module = "androidx.test:runner", version.ref = "testRunner" }
+test-rules = { module = "androidx.test:rules", version.ref = "testRules" }
+
+# UI Test Libraries
+espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
+espresso-intents = { module = "androidx.test.espresso:espresso-intents", version.ref = "espresso" }
+compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+
+[bundles]
+essentials = ["core-ktx", "appcompat", "core-splashscreen", "kotlinx-serialization-json", "kotlinx-datetime"]
+compose = ["compose-ui", "compose-material3", "compose-runtime-livedata", "compose-ui-tooling-preview", "compose-ui-tooling", "activity-compose", "constraintlayout-compose", "navigation-compose"]
+architectural-components = ["lifecycle-viewmodel-ktx", "lifecycle-viewmodel-compose", "lifecycle-runtime-ktx", "lifecycle-runtime-compose"]
+coroutines = ["kotlinx-coroutines-android"]
+
+local-unit-tests = ["truth", "junit", "arch-core-testing", "kotlinx-coroutines-test"]
+instrumentation-tests = ["truth", "junit", "test-ext-junit", "arch-core-testing", "kotlinx-coroutines-test", "test-core", "test-runner", "test-rules"]
+ui-tests = ["espresso-core", "espresso-intents", "compose-ui-test-junit4"]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
