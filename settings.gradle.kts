@@ -18,3 +18,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "JalaliDatePicker"
 include(":app")
+include(":jalalidatepicker")

@@ -2,7 +2,6 @@
 desugar_jdk_libs = "2.1.4"
 coreKtx = "1.15.0"
 appcompat = "1.7.0"
-coreSplashscreen = "1.0.1"
 kotlinxSerializationJson = "1.8.0"
 kotlinxDatetime = "0.6.1"
 compose-bom = "2025.01.01"
@@ -32,7 +31,6 @@ desugar_jdk_libs = { module = "com.android.tools:desugar_jdk_libs", version.ref 
 
 core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
 
@@ -76,7 +74,7 @@ compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4
 compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 
 [bundles]
-essentials = ["core-ktx", "appcompat", "core-splashscreen", "kotlinx-serialization-json", "kotlinx-datetime"]
+essentials = ["core-ktx", "appcompat", "kotlinx-serialization-json", "kotlinx-datetime"]
 compose = ["compose-ui", "compose-material3", "compose-runtime-livedata", "compose-ui-tooling-preview", "compose-ui-tooling", "activity-compose", "constraintlayout-compose", "navigation-compose"]
 architectural-components = ["lifecycle-viewmodel-ktx", "lifecycle-viewmodel-compose", "lifecycle-runtime-ktx", "lifecycle-runtime-compose"]
 coroutines = ["kotlinx-coroutines-android"]
@@ -87,9 +85,9 @@ ui-tests = ["espresso-core", "espresso-intents", "compose-ui-test-junit4"]
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-
