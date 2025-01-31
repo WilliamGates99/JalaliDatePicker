@@ -23,7 +23,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun XeniacDatePickerTheme(
+fun JalaliDatePickerTheme(
     isDarkTheme: Boolean = isSystemInDarkTheme(),
     dynamicColor: Boolean = true, // Dynamic color is available on Android 12+
     content: @Composable () -> Unit

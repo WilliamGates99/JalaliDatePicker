@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.xeniac.jalalidatepickerdemo.ui.theme.XeniacDatePickerTheme
+import com.xeniac.jalalidatepickerdemo.ui.theme.JalaliDatePickerTheme
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
 
         setContent {
-            XeniacDatePickerTheme {
+            JalaliDatePickerTheme {
                 Scaffold(
                     modifier = Modifier.fillMaxSize()
                 ) { innerPadding ->
@@ -44,7 +44,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    XeniacDatePickerTheme {
+    JalaliDatePickerTheme {
         Greeting("Android")
     }
 }
