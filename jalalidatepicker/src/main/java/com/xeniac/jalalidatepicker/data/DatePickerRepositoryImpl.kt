@@ -7,7 +7,7 @@ import com.xeniac.jalalidatepicker.utils.JalaliCalendarUtil
 import com.xeniac.jalalidatepicker.utils.UiText
 import kotlinx.datetime.Clock
 
-class DatePickerRepositoryImpl(
+internal class DatePickerRepositoryImpl(
     private val selectableYearsRange: Iterable<Int>?,
     private val isSelectFromFutureEnabled: Boolean,
     private val datePickerDefaults: DatePickerDefaults

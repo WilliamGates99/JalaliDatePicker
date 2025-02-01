@@ -6,7 +6,7 @@ import kotlinx.datetime.toLocalDateTime
 import java.util.Locale
 
 @Suppress("FunctionName", "LocalVariableName", "SameParameterValue")
-object JalaliCalendarUtil {
+internal object JalaliCalendarUtil {
 
     var day: Int = 0
         private set
@@ -263,9 +263,9 @@ object JalaliCalendarUtil {
     /**
      * Converts Persian(Jalali) date to Gregorian date
      *
-     * @param year  int
-     * @param month int
-     * @param day   int
+     * @param year
+     * @param month
+     * @param day
      */
     fun convertJalaliToGregorian(
         year: Int,
