@@ -30,8 +30,8 @@ activity-compose = { module = "androidx.activity:activity-compose", version.ref 
 
 
 [bundles]
-demo-essentials = ["core-ktx", "appcompat", "kotlinx-serialization-json", "kotlinx-datetime"]
-demo-compose = ["compose-ui", "compose-material3", "compose-ui-tooling-preview", "compose-ui-tooling", "activity-compose"]
+sample-essentials = ["core-ktx", "appcompat", "kotlinx-serialization-json", "kotlinx-datetime"]
+sample-compose = ["compose-ui", "compose-material3", "compose-ui-tooling-preview", "compose-ui-tooling", "activity-compose"]
 library-essentials = ["kotlinx-serialization-json", "kotlinx-datetime"]
 library-compose = ["compose-ui", "compose-material3"]
 

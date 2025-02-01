@@ -79,9 +79,9 @@ dependencies {
     // Java 8+ API Desugaring Support
     coreLibraryDesugaring(libs.desugar.jdk.libs)
 
-    implementation(libs.bundles.demo.essentials)
+    implementation(libs.bundles.sample.essentials)
 
     // Jetpack Compose
     implementation(platform(libs.compose.bom))
-    implementation(libs.bundles.demo.compose)
+    implementation(libs.bundles.sample.compose)
 }
