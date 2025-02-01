@@ -5,7 +5,7 @@
     <string name="month">Month</string>
     <string name="day">Day</string>
 
-    <string-array name="shamsi_months">
+    <string-array name="jalali_months">
         <item>Farvardin</item>
         <item>Ordibehesht</item>
         <item>Khordad</item>

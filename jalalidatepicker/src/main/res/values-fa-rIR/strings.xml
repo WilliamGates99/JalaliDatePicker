@@ -5,7 +5,7 @@
     <string name="month">ماه</string>
     <string name="day">روز</string>
 
-    <string-array name="shamsi_months">
+    <string-array name="jalali_months">
         <item>فروردین</item>
         <item>اردیبهشت</item>
         <item>خرداد</item>
