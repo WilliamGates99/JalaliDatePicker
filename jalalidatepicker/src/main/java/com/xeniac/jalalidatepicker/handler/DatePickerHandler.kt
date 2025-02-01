@@ -2,7 +2,7 @@ package com.xeniac.jalalidatepicker.handler
 
 import com.xeniac.jalalidatepicker.utils.UiText
 
-internal interface DatePickerRepository {
+internal interface DatePickerHandler {
 
     /**
      * Gets the length (number of days) of a given month in the Jalali (Shamsi) calendar for a specific year.

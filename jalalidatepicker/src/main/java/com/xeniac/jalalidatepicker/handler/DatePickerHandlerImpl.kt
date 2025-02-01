@@ -6,11 +6,11 @@ import com.xeniac.jalalidatepicker.utils.JalaliCalendarUtil
 import com.xeniac.jalalidatepicker.utils.UiText
 import kotlinx.datetime.Clock
 
-internal class DatePickerRepositoryImpl(
+internal class DatePickerHandlerImpl(
     private val selectableYearsRange: Iterable<Int>?,
     private val isSelectFromFutureEnabled: Boolean,
     private val datePickerDefaults: DatePickerDefaults
-) : DatePickerRepository {
+) : DatePickerHandler {
 
     private val currentDate = Clock.System.now()
     private val currentDateShamsi = JalaliCalendarUtil.apply {
