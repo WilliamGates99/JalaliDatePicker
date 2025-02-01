@@ -1,4 +1,4 @@
-package com.xeniac.jalalidatepicker.domain
+package com.xeniac.jalalidatepicker.handler
 
 import com.xeniac.jalalidatepicker.utils.UiText
 

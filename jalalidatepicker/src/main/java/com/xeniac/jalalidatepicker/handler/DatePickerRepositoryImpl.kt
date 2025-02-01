@@ -1,7 +1,6 @@
-package com.xeniac.jalalidatepicker.data
+package com.xeniac.jalalidatepicker.handler
 
 import com.xeniac.jalalidatepicker.R
-import com.xeniac.jalalidatepicker.domain.DatePickerRepository
 import com.xeniac.jalalidatepicker.models.DatePickerDefaults
 import com.xeniac.jalalidatepicker.utils.JalaliCalendarUtil
 import com.xeniac.jalalidatepicker.utils.UiText
