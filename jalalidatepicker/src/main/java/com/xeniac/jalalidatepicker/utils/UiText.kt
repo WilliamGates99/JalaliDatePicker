@@ -11,7 +11,7 @@ import kotlinx.parcelize.Parcelize
 import kotlinx.parcelize.RawValue
 
 @Parcelize
-sealed class UiText : Parcelable {
+internal sealed class UiText : Parcelable {
     data class DynamicString(val value: String) : UiText()
 
     class StringResource(
