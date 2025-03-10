@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.kotlin.parcelize)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.maven.publish)
 }
 
 android {
@@ -54,4 +55,18 @@ dependencies {
     // Jetpack Compose
     implementation(platform(libs.compose.bom))
     implementation(libs.bundles.library.compose)
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            groupId = "com.github.williamgates99"
+            artifactId = "jalalidatepicker"
+            version = "1.0.0"
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
 }
