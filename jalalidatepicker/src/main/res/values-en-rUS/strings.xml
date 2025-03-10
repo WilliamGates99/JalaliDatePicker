@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="year">Year</string>
+    <string name="month">Month</string>
+    <string name="day">Day</string>
+
+    <string-array name="jalali_months">
+        <item>Farvardin</item>
+        <item>Ordibehesht</item>
+        <item>Khordad</item>
+        <item>Tir</item>
+        <item>Mordad</item>
+        <item>Shahrivar</item>
+        <item>Mehr</item>
+        <item>Aban</item>
+        <item>Azar</item>
+        <item>Dey</item>
+        <item>Bahman</item>
+        <item>Esfand</item>
+    </string-array>
+
+</resources>

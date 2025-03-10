@@ -11,5 +11,8 @@
 /app/release
 /app/debug
 /app/obfuscation
+/sample/release
+/sample/debug
+/sample/obfuscation
 google-services.json
 .safedk

@@ -54,12 +54,12 @@ android {
         // Java 8+ API Desugaring Support
         isCoreLibraryDesugaringEnabled = true
 
-        sourceCompatibility = JavaVersion.VERSION_22
-        targetCompatibility = JavaVersion.VERSION_22
+        sourceCompatibility = JavaVersion.VERSION_23
+        targetCompatibility = JavaVersion.VERSION_23
     }
 
     kotlinOptions {
-        jvmTarget = "22"
+        jvmTarget = "23"
     }
 
     bundle {
@@ -79,29 +79,9 @@ dependencies {
     // Java 8+ API Desugaring Support
     coreLibraryDesugaring(libs.desugar.jdk.libs)
 
-    implementation(libs.bundles.essentials)
+    implementation(libs.bundles.sample.essentials)
 
     // Jetpack Compose
     implementation(platform(libs.compose.bom))
-    implementation(libs.bundles.compose)
-
-    // Architectural Components
-    implementation(libs.bundles.architectural.components)
-
-    // Coroutines
-    implementation(libs.bundles.coroutines)
-
-    // Timber Library
-    implementation(libs.timber)
-
-    // Local Unit Test Libraries
-    testImplementation(libs.bundles.local.unit.tests)
-
-    // Instrumentation Test Libraries
-    androidTestImplementation(libs.bundles.instrumentation.tests)
-
-    // UI Test Libraries
-    androidTestImplementation(libs.bundles.ui.tests)
-    androidTestImplementation(platform(libs.compose.bom))
-    debugImplementation(libs.compose.ui.test.manifest)
+    implementation(libs.bundles.sample.compose)
 }
