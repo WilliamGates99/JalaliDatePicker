@@ -13,7 +13,7 @@ android {
     buildToolsVersion = "36.0.0"
 
     defaultConfig {
-        minSdk = 36
+        minSdk = 21
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -62,7 +62,7 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "com.github.williamgates99"
             artifactId = "jalalidatepicker"
-            version = "1.0.0"
+            version = "1.0.1"
 
             afterEvaluate {
                 from(components["release"])
