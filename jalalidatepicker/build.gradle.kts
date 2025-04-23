@@ -9,11 +9,11 @@ plugins {
 
 android {
     namespace = "com.xeniac.jalalidatepicker"
-    compileSdk = 35
-    buildToolsVersion = "35.0.0"
+    compileSdk = 36
+    buildToolsVersion = "36.0.0"
 
     defaultConfig {
-        minSdk = 21
+        minSdk = 36
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
