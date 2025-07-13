@@ -25,8 +25,9 @@ import com.xeniac.jalalidatepicker.handler.DatePickerHandlerImpl
 import com.xeniac.jalalidatepicker.models.DatePickerDefaults
 import com.xeniac.jalalidatepicker.models.SelectedJalaliDate
 import com.xeniac.jalalidatepicker.utils.JalaliCalendarUtil
-import kotlinx.datetime.Clock
-import kotlinx.datetime.Instant
+import kotlin.time.Clock
+import kotlin.time.ExperimentalTime
+import kotlin.time.Instant
 
 /**
  * A composable date picker for selecting dates in the Jalali (Shamsi) calendar.
@@ -58,6 +59,7 @@ import kotlinx.datetime.Instant
  * @see MaterialTheme
  * @see LocalTextStyle
  */
+@OptIn(ExperimentalTime::class)
 @Composable
 fun JalaliDatePicker(
     modifier: Modifier = Modifier,

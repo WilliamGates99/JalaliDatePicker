@@ -1,10 +1,13 @@
 package com.xeniac.jalalidatepicker.utils
 
-import kotlinx.datetime.Instant
 import kotlinx.datetime.TimeZone
+import kotlinx.datetime.number
 import kotlinx.datetime.toLocalDateTime
 import java.util.Locale
+import kotlin.time.ExperimentalTime
+import kotlin.time.Instant
 
+@OptIn(ExperimentalTime::class)
 @Suppress("FunctionName", "LocalVariableName", "SameParameterValue")
 internal object JalaliCalendarUtil {
 
@@ -255,8 +258,8 @@ internal object JalaliCalendarUtil {
         val localDateTime = date.toLocalDateTime(timeZone = timeZone)
         convertGregorianToJalali(
             localDateTime.year,
-            localDateTime.monthNumber,
-            localDateTime.dayOfMonth
+            localDateTime.month.number,
+            localDateTime.day
         )
     }
 

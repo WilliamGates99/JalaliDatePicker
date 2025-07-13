@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import com.xeniac.jalalidatepicker.JalaliDatePicker
 import com.xeniac.jalalidatepicker.models.SelectedJalaliDate
 import com.xeniac.jalalidatepickerdemo.ui.theme.JalaliDatePickerTheme
+import kotlin.time.ExperimentalTime
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,6 +57,7 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
+@OptIn(ExperimentalTime::class)
 @Composable
 private fun JalaliDatePickerDemo(
     modifier: Modifier = Modifier,
