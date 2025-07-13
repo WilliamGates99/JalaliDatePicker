@@ -1,5 +1,7 @@
 @file:Suppress("UnstableApiUsage")
 
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin)
@@ -58,8 +60,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_23
     }
 
-    kotlinOptions {
-        jvmTarget = "23"
+    kotlin {
+        compilerOptions {
+            jvmTarget = JvmTarget.fromTarget(target = "23")
+        }
     }
 
     bundle {
