@@ -73,7 +73,7 @@ fun JalaliDatePicker(
         fontSize = 14.sp
     ),
     showMonthNumber: Boolean = false,
-    onSelectedDateChange: (SelectedJalaliDate) -> Unit
+    onSelectedDateChange: (selectedJalaliDate: SelectedJalaliDate) -> Unit
 ) {
     val context = LocalContext.current
 
@@ -89,7 +89,9 @@ fun JalaliDatePicker(
         convertGregorianToJalali(date = initialSelectedDate)
     }
 
-    LaunchedEffect(key1 = Unit) {
+    LaunchedEffect(key1 = initialSelectedDate) {
+        initialSelectedDateJalali.convertGregorianToJalali(date = initialSelectedDate)
+
         onSelectedDateChange(
             SelectedJalaliDate(
                 year = initialSelectedDateJalali.year,
@@ -99,9 +101,15 @@ fun JalaliDatePicker(
         )
     }
 
-    var selectedYear by remember { mutableIntStateOf(initialSelectedDateJalali.year) }
-    var selectedMonth by remember { mutableIntStateOf(initialSelectedDateJalali.month) }
-    var selectedDay by remember { mutableIntStateOf(initialSelectedDateJalali.day) }
+    var selectedYear by remember(key1 = initialSelectedDateJalali.year) {
+        mutableIntStateOf(initialSelectedDateJalali.year)
+    }
+    var selectedMonth by remember(key1 = initialSelectedDateJalali.month) {
+        mutableIntStateOf(initialSelectedDateJalali.month)
+    }
+    var selectedDay by remember(key1 = initialSelectedDateJalali.day) {
+        mutableIntStateOf(initialSelectedDateJalali.day)
+    }
 
     Row(
         modifier = modifier
