@@ -13,7 +13,7 @@ plugins {
 android {
     namespace = "com.xeniac.jalalidatepickerdemo"
     compileSdk = 36
-    buildToolsVersion = "36.0.0"
+    buildToolsVersion = "36.1.0"
 
     defaultConfig {
         applicationId = "com.xeniac.jalalidatepickerdemo"
