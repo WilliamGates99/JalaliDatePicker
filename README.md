@@ -38,7 +38,7 @@ repositories {
   
 ```kotlin
 dependencies {
-    implementation("com.github.williamgates99:jalalidatepicker:1.0.2")
+    implementation("com.github.williamgates99:jalalidatepicker:1.0.3")
 }
 ```
 </details>
@@ -48,7 +48,7 @@ dependencies {
   
 ```groovy
 dependencies {
-    implementation 'com.github.williamgates99:jalalidatepicker:1.0.2'
+    implementation 'com.github.williamgates99:jalalidatepicker:1.0.3'
 }
 ```
 </details>

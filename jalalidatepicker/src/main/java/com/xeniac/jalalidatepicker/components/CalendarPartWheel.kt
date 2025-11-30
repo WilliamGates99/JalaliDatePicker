@@ -15,7 +15,7 @@ internal fun CalendarPartWheel(
     textStyle: TextStyle,
     modifier: Modifier = Modifier,
     label: (Int) -> String = { it.toString() },
-    onSelectedValueChange: (Int) -> Unit
+    onSelectedValueChange: (newValue: Int) -> Unit
 ) {
     ItemPickerWheel(
         selectedValue = selectedValue,

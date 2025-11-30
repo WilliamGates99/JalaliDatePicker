@@ -93,7 +93,9 @@ internal object JalaliCalendarUtil {
      *
      * @param JDN the Julian Day number
      */
-    private fun jD2Jal(JDN: Int) {
+    private fun jD2Jal(
+        JDN: Int
+    ) {
         JD2JG(JD = JDN, J1G0 = 0)
 
         jalaliYear = gregYear - 621
@@ -156,7 +158,9 @@ internal object JalaliCalendarUtil {
      *
      * @param jY Jalali calendar year (-61 to 3177)
      */
-    private fun JalCal(jY: Int) {
+    private fun JalCal(
+        jY: Int
+    ) {
         march = 0
         leap = 0
         val breaks = intArrayOf(
@@ -206,7 +210,9 @@ internal object JalaliCalendarUtil {
      *
      * @see <a href="https://en.wikipedia.org/wiki/Jalali_calendar">Jalali calendar on Wikipedia</a>
      */
-    fun isLeapYear(year: Int): Boolean = when (year % 33) {
+    fun isLeapYear(
+        year: Int
+    ): Boolean = when (year % 33) {
         1, 5, 9, 13, 17, 22, 26, 30 -> true
         else -> false
     }
@@ -257,9 +263,9 @@ internal object JalaliCalendarUtil {
     ) {
         val localDateTime = date.toLocalDateTime(timeZone = timeZone)
         convertGregorianToJalali(
-            localDateTime.year,
-            localDateTime.month.number,
-            localDateTime.day
+            gregYear = localDateTime.year,
+            gregMonth = localDateTime.month.number,
+            gregDay = localDateTime.day
         )
     }
 

@@ -12,10 +12,10 @@ plugins {
 android {
     namespace = "com.xeniac.jalalidatepicker"
     compileSdk = 36
-    buildToolsVersion = "36.0.0"
+    buildToolsVersion = "36.1.0"
 
     defaultConfig {
-        minSdk = 21
+        minSdk = 23
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -66,7 +66,7 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "com.github.williamgates99"
             artifactId = "jalalidatepicker"
-            version = "1.0.2"
+            version = "1.0.3"
 
             afterEvaluate {
                 from(components["release"])
