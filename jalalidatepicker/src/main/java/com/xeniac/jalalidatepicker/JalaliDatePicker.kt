@@ -89,7 +89,7 @@ fun JalaliDatePicker(
         convertGregorianToJalali(date = initialSelectedDate)
     }
 
-    LaunchedEffect(key1 = initialSelectedDate) {
+    LaunchedEffect(key1 = initialSelectedDateJalali) {
         initialSelectedDateJalali.convertGregorianToJalali(date = initialSelectedDate)
 
         onSelectedDateChange(
