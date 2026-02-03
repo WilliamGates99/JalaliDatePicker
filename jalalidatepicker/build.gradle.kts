@@ -65,7 +65,7 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 groupId = "com.github.williamgates99"
                 artifactId = "jalalidatepicker"
-                version = "1.0.3"
+                version = "1.0.4"
 
                 from(components["release"])
             }
