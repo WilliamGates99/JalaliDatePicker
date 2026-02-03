@@ -8,7 +8,7 @@ compose-bom = "2025.11.01"
 activityCompose = "1.12.0"
 
 # Plugins
-agp = "8.13.1"
+agp = "9.0.0"
 kotlin = "2.2.21"
 
 [libraries]
@@ -38,7 +38,6 @@ library-compose = ["compose-ui", "compose-material3"]
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
