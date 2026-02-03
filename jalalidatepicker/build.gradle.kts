@@ -39,6 +39,13 @@ android {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
     }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
 
 dependencies {
@@ -52,14 +59,14 @@ dependencies {
     implementation(libs.bundles.library.compose)
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("release") {
-            groupId = "com.github.williamgates99"
-            artifactId = "jalalidatepicker"
-            version = "1.0.3"
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                groupId = "com.github.williamgates99"
+                artifactId = "jalalidatepicker"
+                version = "1.0.3"
 
-            afterEvaluate {
                 from(components["release"])
             }
         }
