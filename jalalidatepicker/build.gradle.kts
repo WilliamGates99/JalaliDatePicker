@@ -46,7 +46,6 @@ android {
     publishing {
         singleVariant("release") {
             withSourcesJar()
-//            withJavadocJar()
         }
     }
 }
@@ -68,14 +67,14 @@ dependencies {
     implementation(libs.bundles.library.compose)
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("release") {
-                groupId = "com.github.williamgates99"
-                artifactId = "jalalidatepicker"
-                version = "1.0.5"
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.github.williamgates99"
+            artifactId = "jalalidatepicker"
+            version = "1.0.5"
 
+            afterEvaluate {
                 from(components["release"])
             }
         }
