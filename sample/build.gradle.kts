@@ -19,8 +19,8 @@ android {
         applicationId = "com.xeniac.jalalidatepickerdemo"
         minSdk = 23
         targetSdk = 36
-        versionCode = 6
-        versionName = "1.0.5"
+        versionCode = 5
+        versionName = "1.0.4"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 

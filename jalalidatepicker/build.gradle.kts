@@ -67,14 +67,14 @@ dependencies {
     implementation(libs.bundles.library.compose)
 }
 
-publishing {
-    publications {
-        register<MavenPublication>("release") {
-            groupId = "com.github.williamgates99"
-            artifactId = "jalalidatepicker"
-            version = "1.0.5"
+afterEvaluate {
+    publishing {
+        publications {
+            register<MavenPublication>("release") {
+                groupId = "com.github.williamgates99"
+                artifactId = "jalalidatepicker"
+                version = "1.0.4"
 
-            afterEvaluate {
                 from(components["release"])
             }
         }
