@@ -4,8 +4,8 @@ coreKtx = "1.17.0"
 appcompat = "1.7.1"
 kotlinxSerializationJson = "1.10.0"
 kotlinxDatetime = "0.7.1"
-compose-bom = "2026.01.01"
-activityCompose = "1.12.3"
+compose-bom = "2026.02.00"
+activityCompose = "1.12.4"
 
 # Plugins
 agp = "9.0.0"
