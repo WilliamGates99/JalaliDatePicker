@@ -12,13 +12,13 @@ plugins {
 
 android {
     namespace = "com.xeniac.jalalidatepickerdemo"
-    compileSdk = 36
-    buildToolsVersion = "36.1.0"
+    compileSdk = libs.versions.android.compileSdk.get().toInt()
+    buildToolsVersion = libs.versions.android.buildToolsVersion.get()
 
     defaultConfig {
         applicationId = "com.xeniac.jalalidatepickerdemo"
-        minSdk = 23
-        targetSdk = 36
+        minSdk = libs.versions.android.minSdk.get().toInt()
+        targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 6
         versionName = "1.0.5"
 

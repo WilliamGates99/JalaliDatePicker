@@ -1,4 +1,10 @@
 [versions]
+# Gradle
+android-minSdk = "23"
+android-targetSdk = "37"
+android-compileSdk = "37"
+android-buildToolsVersion = "37.0.0"
+
 desugar_jdk_libs = "2.1.5"
 coreKtx = "1.17.0"
 appcompat = "1.7.1"
