@@ -15,7 +15,7 @@ activityCompose = "1.12.4"
 
 # Plugins
 agp = "9.0.0"
-kotlin = "2.3.10"
+kotlin = "2.3.20"
 
 [libraries]
 # Java 8+ API Desugaring Support
