@@ -1,8 +1,12 @@
 [versions]
 # Gradle
+#noinspection UnusedVersionCatalogEntry
 android-minSdk = "23"
+#noinspection UnusedVersionCatalogEntry
 android-targetSdk = "37"
+#noinspection UnusedVersionCatalogEntry
 android-compileSdk = "37"
+#noinspection UnusedVersionCatalogEntry
 android-buildToolsVersion = "37.0.0"
 
 desugar_jdk_libs = "2.1.5"
