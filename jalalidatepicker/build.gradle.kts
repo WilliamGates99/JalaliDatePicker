@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.serialization)
@@ -10,11 +8,11 @@ plugins {
 
 android {
     namespace = "com.xeniac.jalalidatepicker"
-    compileSdk = 36
-    buildToolsVersion = "36.1.0"
+    compileSdk = libs.versions.android.compileSdk.get().toInt()
+    buildToolsVersion = libs.versions.android.buildToolsVersion.get()
 
     defaultConfig {
-        minSdk = 23
+        minSdk = libs.versions.android.minSdk.get().toInt()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -50,12 +48,6 @@ android {
     }
 }
 
-kotlin {
-    compilerOptions {
-        jvmTarget = JvmTarget.fromTarget(target = "21")
-    }
-}
-
 dependencies {
     // Java 8+ API Desugaring Support
     coreLibraryDesugaring(libs.desugar.jdk.libs)
@@ -73,7 +65,7 @@ afterEvaluate {
             register<MavenPublication>("release") {
                 groupId = "com.github.williamgates99"
                 artifactId = "jalalidatepicker"
-                version = "1.0.5"
+                version = "1.0.6"
 
                 from(components["release"])
             }

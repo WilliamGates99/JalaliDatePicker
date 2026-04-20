@@ -1,7 +1,5 @@
 @file:Suppress("UnstableApiUsage")
 
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
 
 plugins {
     alias(libs.plugins.android.application)
@@ -12,15 +10,15 @@ plugins {
 
 android {
     namespace = "com.xeniac.jalalidatepickerdemo"
-    compileSdk = 36
-    buildToolsVersion = "36.1.0"
+    compileSdk = libs.versions.android.compileSdk.get().toInt()
+    buildToolsVersion = libs.versions.android.buildToolsVersion.get()
 
     defaultConfig {
         applicationId = "com.xeniac.jalalidatepickerdemo"
-        minSdk = 23
-        targetSdk = 36
-        versionCode = 6
-        versionName = "1.0.5"
+        minSdk = libs.versions.android.minSdk.get().toInt()
+        targetSdk = libs.versions.android.targetSdk.get().toInt()
+        versionCode = 7
+        versionName = "1.0.6"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
@@ -69,12 +67,6 @@ android {
              */
             enableSplit = false
         }
-    }
-}
-
-kotlin {
-    compilerOptions {
-        jvmTarget = JvmTarget.fromTarget(target = "23")
     }
 }
 
